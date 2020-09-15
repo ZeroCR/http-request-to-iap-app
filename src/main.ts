@@ -36,6 +36,8 @@ async function run(): Promise<void> {
     const url: string = core.getInput('url')
     const targetAudience: string = core.getInput('target-audience')
     const serviceAccountKey = core.getInput('service_account_key')
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const method: any = core.getInput('method')
     core.info(`request IAP ${url} with target audience ${targetAudience}`)
     const serviceAccountJson = parseServiceAccountKey(serviceAccountKey)
     const auth = new GoogleAuth({
@@ -46,7 +48,7 @@ async function run(): Promise<void> {
     })
 
     const client = await auth.getIdTokenClient(targetAudience)
-    const res = await client.request({url})
+    const res = await client.request({url, method})
     core.info(JSON.stringify(res.data))
 
     core.info('Request done')

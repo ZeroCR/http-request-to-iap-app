@@ -11,6 +11,13 @@ inputs:
   service_account_key:
     required: true
     description: 'Service account'
+  method:
+    required: false
+    default: GET
+    description: 'HTTP method'
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  color: blue
+  icon: phone-call
