@@ -5,10 +5,10 @@ inputs:
   url:
     required: true
     description: 'Url to send request'
-  targetAudience :
+  target-audience:
     required: true
     description: 'Target audience'
-  service_account_key :
+  service_account_key:
     required: true
     description: 'Service account'
 runs:

@@ -34,7 +34,7 @@ export function parseServiceAccountKey(
 async function run(): Promise<void> {
   try {
     const url: string = core.getInput('url')
-    const targetAudience: string = core.getInput('targetAudience')
+    const targetAudience: string = core.getInput('target-audience')
     const serviceAccountKey = core.getInput('service_account_key')
     core.info(`request IAP ${url} with target audience ${targetAudience}`)
     const serviceAccountJson = parseServiceAccountKey(serviceAccountKey)

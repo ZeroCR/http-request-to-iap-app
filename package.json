@@ -1,6 +1,6 @@
 {
   "name": "http-request-to-iap-protected-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Action for making HTTP request to IAP-protected app",
   "main": "lib/main.js",
