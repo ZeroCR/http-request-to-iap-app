@@ -1,11 +1,16 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'HTTP request to IAP-protected app'
+description: 'Action for making HTTP request to IAP-protected app'
+author: 'Edgar Hernandez'
 inputs:
-  milliseconds: # change this
+  url:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Url to send request'
+  targetAudience :
+    required: true
+    description: 'Target audience'
+  service_account_key :
+    required: true
+    description: 'Service account'
 runs:
   using: 'node12'
   main: 'dist/index.js'
